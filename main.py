@@ -228,7 +228,7 @@ async def create_proveedor(proov:ProveedorIn):
 @app.get("/getProveedor/",response_model=List[Proveedor] )
 async def getProveedor(skip: int=0, take: int=20):
     query= proveedor.select().offset(skip).limit(take)
-    return await database.fetch_all(query)
+    return await d  atabase.fetch_all(query)
 
 
 
